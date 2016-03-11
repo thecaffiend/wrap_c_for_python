@@ -1,0 +1,4 @@
+non-pip requirements
+* ctypesgen (https://github.com/r-ku/ctypesgen.git)
+
+pyrequirements:

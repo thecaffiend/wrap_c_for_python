@@ -1,0 +1,10 @@
+# Con
+* python2 only...
+* little control of the generated stuff. (e.g. char string max len 32 throws
+  a ValueError if len exceeded. rather than truncating the str at max len here,
+  it has to be handled elsewhere, like in a wrapper class)
+
+# Pro
+* Very easy to use
+* no installation
+* no dependencies

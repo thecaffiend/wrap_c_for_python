@@ -1,0 +1,3 @@
+swig3.0 (windows has a pre-built binary)
+
+pyrequirements:
