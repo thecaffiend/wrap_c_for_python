@@ -1,4 +1,0 @@
-# still to do
-* do cffi and pybindgen, xdress examples
-* add example usage scripts for each built Extension
-* move findings into root level file (perhaps in readme.md), with more detail

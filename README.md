@@ -22,3 +22,9 @@ As of now, all of this was tested on Python 3.4 (via anaconda environments)
 * pybindgen
 * cffi
 * xdress
+
+## TODO
+* do cffi and pybindgen, xdress examples
+* add example usage scripts for each built Extension
+* move findings into root level file (perhaps in readme.md), with more detail
+* look at making actual tests instead of simple asserts
