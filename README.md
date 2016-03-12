@@ -1,23 +1,34 @@
 # Examples of wrapping C headers (only headers with defines and structs) for use in python.
-I needed to look at various tech for this purpose. Results are here. Each
-subfolder that names a tech (and has been implemented) produces an extension
-module.
+I needed to look at various tech for this purpose. These header files will
+be wrapped for use in python to send/receive over a TCP socket for interaction
+with a C application. Results of the research are here.
+
+Each subfolder that names a tech (and has been implemented) produces an
+extension module. They are built in place for testing purposes, and not as a
+module for installation or distribution. The include directory contains the
+common include files the extension modules operate on.
 
 As of now, all of this was tested on Python 3.4 (via anaconda environments)
 *except* for ctypesgen (which didn't work with python 3, and I used python
-2.7). I may not have the dependencies quite up to date for each.
+2.7). I may not have the dependencies quite up to date for each. I'll try to
+update those as I go.
 
 ## Implemented
 ### ctypesgen
 ### cython
 ### swig
-* Swig needs to be installed. This was tested using swig3.0
-* To build this, cd into the swig directory and run the build_ext.sh script
- * If the command to run swig is not `/usr/bin/swig3.0` the script will need to
-   be modified to point to your swig executable.
- * This will build the module in place (not as a proper module to be installed)
-* run `python test_wrapper.py` to test the build. This was tested on python3.0
-* run `rmbuilt.sh` to remove the built files
+* Dependencies
+ * Swig needs to be installed. This was tested using swig3.0
+ * Python is also needed. This is built for python3.
+* To build:
+ * cd into the swig directory and run the build_ext.sh script
+ * NOTE: If the command to run swig is not `/usr/bin/swig3.0` the script will
+   need to be modified to point to your swig executable.
+ * This will build the module in place
+* To test:
+    * from the swig directory, run `python test_wrapper.py` to test the build.
+* To clean:
+ * from the swig directory, run `rmbuilt.sh` to remove the built files
 
 ## To come (maybe)
 * pybindgen
@@ -27,5 +38,7 @@ As of now, all of this was tested on Python 3.4 (via anaconda environments)
 ## TODO
 * do cffi and pybindgen, xdress examples
 * add example usage scripts for each built Extension
-* move findings into root level file (perhaps in readme.md), with more detail
+* move findings and dependencies into README.md, with more detail
 * look at making actual tests instead of simple asserts
+* add example wrapper classes to illustrate functionality for sending/receiving
+  over sockets.
