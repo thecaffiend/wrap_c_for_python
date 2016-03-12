@@ -17,6 +17,7 @@ As of now, all of this was tested on Python 3.4 (via anaconda environments)
    be modified to point to your swig executable.
  * This will build the module in place (not as a proper module to be installed)
 * run `python test_wrapper.py` to test the build. This was tested on python3.0
+* run `rmbuilt.sh` to remove the built files
 
 ## To come (maybe)
 * pybindgen
