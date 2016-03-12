@@ -8,9 +8,15 @@ As of now, all of this was tested on Python 3.4 (via anaconda environments)
 2.7). I may not have the dependencies quite up to date for each.
 
 ## Implemented
-* ctypesgen
-* cython
-* swig
+### ctypesgen
+### cython
+### swig
+* Swig needs to be installed. This was tested using swig3.0
+* To build this, cd into the swig directory and run the build_ext.sh script
+ * If the command to run swig is not `/usr/bin/swig3.0` the script will need to
+   be modified to point to your swig executable.
+ * This will build the module in place (not as a proper module to be installed)
+* run `python test_wrapper.py` to test the build. This was tested on python3.0
 
 ## To come (maybe)
 * pybindgen
