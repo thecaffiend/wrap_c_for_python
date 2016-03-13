@@ -50,6 +50,11 @@ update those as I go.
 * little control of the generated stuff. (e.g. char string max len 32 throws
   a TypeError if len exceeded. rather than truncating the str at max len here,
   it has to be handled elsewhere, like in a wrapper class)
+* structs with arrays of structs are weird. adding __getitem__ and __setitem__
+  implementations is required in the interface, and the struct containing the
+  array of structs is then subscriptable (and the array member of the struct
+  wrapper is ignorable). Perhaps there is a better way (without modification
+  of the header)?
 
 ## To come (maybe)
 * pybindgen
