@@ -13,8 +13,10 @@
 
 %extend __mh_item_list_s
 {
-    /* TODO: How to use #defines from mainheader.h file here instead of 32 */
-    inline size_t __len__() const {return 32;}
+    /*
+        TODO: How to use #defines from mainheader.h file here instead of 32?
+    */
+    inline size_t __len__() const {return $self->header.length;}
 
     /*
     Note: this makes the __mh_item_list_s struct itself have these methods.
